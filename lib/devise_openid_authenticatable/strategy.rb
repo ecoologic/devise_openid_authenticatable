@@ -100,8 +100,6 @@ class Devise::Strategies::OpenidAuthenticatable < Devise::Strategies::Authentica
         resource.openid_fields = fields
       end
 
-      resource.remember_me! if resource.respond_to?(:remember_me!)
-
       resource.save!
     end
 
