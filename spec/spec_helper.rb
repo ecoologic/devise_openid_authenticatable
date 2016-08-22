@@ -14,6 +14,11 @@ Webrat.configure do |config|
 end
 
 RSpec.configure do |config|
+  %i(controller view request).each do |type|
+    config.include ::Rails::Controller::Testing::TestProcess,        type: type
+    config.include ::Rails::Controller::Testing::TemplateAssertions, type: type
+    config.include ::Rails::Controller::Testing::Integration,        type: type
+  end if Rails.version >= '5'
   config.mock_with :mocha
   config.infer_spec_type_from_file_location!
 end

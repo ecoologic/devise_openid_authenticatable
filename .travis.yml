@@ -1,6 +1,8 @@
 matrix:
   include:
     - rvm:     2.3.1
+      gemfile: Gemfile.devise42
+    - rvm:     2.3.1
       gemfile: Gemfile.devise35
     - rvm:     2.3.1
       gemfile: Gemfile.devise33
