@@ -10,7 +10,5 @@ group :test do
   gem 'devise', '~> 3.5.10'
   gem 'rots', github: 'roman/rots'
   gem 'test-unit' # Ruby > 2.2 && Rails > 4 https://github.com/rspec/rspec-rails/issues/1273
-  gem 'pry-meta'
-  gem 'pry-stack_explorer'
 end
 
